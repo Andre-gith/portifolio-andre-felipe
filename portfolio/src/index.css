@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+	--bg:#0b0b0d;
+	--muted:#94a3b8;
+}
+
+html,body,#root{
+	height:100%;
+}
+
+body{
+	@apply bg-neutral-900 text-white font-sans;
+}
+
+img{max-width:100%;display:block}
+
+/* Smooth scroll for in-page navigation */
+html { scroll-behavior: smooth; }
+
+/* Container width consistency */
+.container-max { max-width: 1200px; margin-left: auto; margin-right: auto; }
+
+/* Subtle background depth */
+body::before{
+	content: "";
+	position: fixed;
+	inset: 0;
+	background: radial-gradient(800px 600px at 10% 10%, rgba(124,111,247,0.06), transparent 10%), radial-gradient(600px 400px at 90% 90%, rgba(107,70,193,0.04), transparent 10%);
+	pointer-events: none;
+	z-index: 0;
+}
+
+/* Focus visible for accessibility */
+:focus-visible { outline: 2px solid rgba(124,111,247,0.8); outline-offset: 2px; }
