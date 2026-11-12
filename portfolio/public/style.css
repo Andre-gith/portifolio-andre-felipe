@@ -411,6 +411,15 @@ nav .navlinks li a:hover {
     line-height: 1.6;
 }
 
+.projeto-descricao {
+    display: grid;
+    gap: 0.65rem;
+}
+
+.projeto-descricao strong {
+    color: #c5c5d5;
+}
+
 .projeto-tags {
     display: flex;
     flex-wrap: wrap;
