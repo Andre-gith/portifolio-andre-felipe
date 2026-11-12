@@ -6,7 +6,7 @@ export default function GithubProjects() {
 
   return (
     <section id="github" className="px-6 py-20 max-w-6xl mx-auto">
-      <h2 className="text-3xl font-bold mb-4">More projects on GitHub</h2>
+      <h2 className="text-3xl font-bold mb-4">Mais projetos no GitHub</h2>
       <p className="text-gray-300 mb-6">Explore projetos públicos e contribuições.</p>
 
       {status === "empty" && (
@@ -29,7 +29,7 @@ export default function GithubProjects() {
       )}
 
       <div className="mt-6">
-        <a href="https://github.com/Andre-gith" target="_blank" rel="noreferrer" className="px-4 py-2 border rounded">View GitHub</a>
+        <a href="https://github.com/Andre-gith" target="_blank" rel="noreferrer" className="px-4 py-2 border rounded">Ver GitHub</a>
       </div>
     </section>
   );

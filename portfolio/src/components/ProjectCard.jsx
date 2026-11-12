@@ -11,7 +11,7 @@ export default function ProjectCard({ project, reverse = false }) {
       transition={{ duration: 0.6 }}
       className={`flex flex-col md:flex-row items-center gap-8 ${reverse ? "md:flex-row-reverse" : ""}`}
     >
-      <div className="md:w-1/2">
+      <div className={project.image ? "md:w-1/2" : "w-full"}>
         <div className="text-sm text-primary mb-2 font-mono">{project.id}</div>
         <h3 className="text-3xl md:text-4xl font-extrabold mb-4 leading-tight">{project.title}</h3>
         <p className="text-gray-300 mb-6 max-w-xl">{project.description}</p>
@@ -32,11 +32,13 @@ export default function ProjectCard({ project, reverse = false }) {
         </div>
       </div>
 
-      <div className="md:w-1/2">
-        <div className="w-full h-72 md:h-80 bg-neutral-800 rounded overflow-hidden flex items-center justify-center transform-gpu hover:scale-105 transition-transform">
-          <img src={project.image} alt={project.title} className="object-cover w-full h-full" />
+      {project.image && (
+        <div className="md:w-1/2">
+          <div className="w-full h-72 md:h-80 bg-neutral-800 rounded overflow-hidden flex items-center justify-center transform-gpu hover:scale-105 transition-transform">
+            <img src={project.image} alt={project.title} className="object-cover w-full h-full" />
+          </div>
         </div>
-      </div>
+      )}
     </motion.article>
   );
 }

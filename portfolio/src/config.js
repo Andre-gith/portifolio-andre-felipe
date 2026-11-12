@@ -3,9 +3,9 @@ export const CONTACT_EMAIL = ""; // Preencha manualmente com seu e-mail para ati
 
 // Repositórios públicos em destaque (nomes exatos do GitHub)
 export const featuredRepositories = [
-  "simulador-concursos",
   "Construtor-de-Presell",
   "api-gerenciamento-tarefas",
+  "FreelaCalc",
 ];
 
 export default { CONTACT_EMAIL, featuredRepositories };

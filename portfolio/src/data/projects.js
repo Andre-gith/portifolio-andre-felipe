@@ -2,6 +2,18 @@ export const projects = [
   {
     id: "01",
     number: "01",
+    title: "Kora — Plataforma Educacional IA",
+    slug: "kora",
+    description:
+      "Plataforma com IA para professores da rede pública gerarem provas, atividades e planos de aula automaticamente. Projeto acadêmico FIAP com integração à API da OpenAI.",
+    technologies: ["Next.js", "Node.js", "MongoDB", "OpenAI GPT-4o", "Tailwind"],
+    github: "",
+    demo: "",
+    featured: true,
+  },
+  {
+    id: "02",
+    number: "02",
     title: "Nota de Banca - Simulador",
     slug: "simulador-concursos",
     description:
@@ -13,8 +25,21 @@ export const projects = [
     featured: true,
   },
   {
-    id: "02",
-    number: "02",
+    id: "03",
+    number: "03",
+    title: "Wedding Photo App",
+    slug: "wedding-photo-app",
+    description:
+      "Galeria de fotos para casamentos e eventos. Os convidados podem enviar fotos pelo navegador, compartilhando a galeria por QR Code.",
+    technologies: ["TypeScript", "Galeria de fotos", "QR Code", "Eventos"],
+    github: "https://github.com/Andre-gith/wedding-photo-app",
+    demo: "https://wedding-photo-app-eta.vercel.app/",
+    image: "/projects/laco/laco.png",
+    featured: true,
+  },
+  {
+    id: "04",
+    number: "04",
     title: "Construtor de Presell",
     slug: "construtor-de-presell",
     description:
@@ -22,37 +47,22 @@ export const projects = [
     technologies: ["JavaScript", "Node.js", "Vercel"],
     github: "https://github.com/Andre-gith/Construtor-de-Presell",
     demo: "https://construtor-de-presell.vercel.app/",
-    image: "/projects/construtor-de-presell/placeholder.png",
-    featured: true,
+    featured: false,
   },
   {
-    id: "03",
-    number: "03",
+    id: "05",
+    number: "05",
     title: "API Gerenciamento de Tarefas",
     slug: "api-gerenciamento-tarefas",
     description: "API REST para gerenciamento de tarefas, implementada em Node.js e Express (endpoints para CRUD).",
     technologies: ["Node.js", "Express", "JavaScript"],
     github: "https://github.com/Andre-gith/api-gerenciamento-tarefas",
     demo: "",
-    image: "/projects/api-gerenciamento-tarefas/placeholder.png",
     featured: false,
   },
   {
-    id: "04",
-    number: "04",
-    title: "Laço",
-    slug: "laco",
-    description:
-      "Galeria de fotos para casamentos e eventos. Os convidados podem enviar fotos pelo navegador, compartilhando a galeria por QR Code.",
-    technologies: ["Galeria de fotos", "QR Code", "Eventos"],
-    github: "",
-    demo: "https://wedding-photo-app-eta.vercel.app/",
-    image: "/projects/laco/laco.png",
-    featured: true,
-  },
-  {
-    id: "05",
-    number: "05",
+    id: "06",
+    number: "06",
     title: "FreelaCalc",
     slug: "freelacalc",
     description:
@@ -61,7 +71,7 @@ export const projects = [
     github: "",
     demo: "https://freelacalc.netlify.app/",
     image: "/projects/freelacalc/freelacalc.png",
-    featured: true,
+    featured: false,
   },
 ];
 
