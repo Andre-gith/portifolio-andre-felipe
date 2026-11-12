@@ -239,6 +239,18 @@ nav .navlinks li a.active {
     margin-bottom: 6px;
 }
 
+.hero-text h5 .hero-role {
+    display: inline-block;
+    color: #e8f4ff;
+    background: #007ced20;
+    border: 1px solid #007ced66;
+    border-radius: 20px;
+    padding: 6px 12px;
+    margin-bottom: 8px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
 .hero-text h5 span {
     color: #007ced;
     font-size: 15px;
@@ -322,7 +334,7 @@ nav .navlinks li a.active {
 
 .trajetoria-grid {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 1.5rem;
 }
 
@@ -675,6 +687,10 @@ footer i {
     }
 
     .competencias-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .trajetoria-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
