@@ -23,15 +23,11 @@ export default function ProjectCard({ project, reverse = false }) {
         </div>
 
         <div className="flex gap-3">
-          {project.github ? (
+          {project.github && (
             <a href={project.github} className="px-4 py-2 border border-gray-700 rounded hover:border-primary transition">GitHub</a>
-          ) : (
-            <button disabled className="px-4 py-2 border border-gray-700 rounded text-gray-500">GitHub</button>
           )}
-          {project.demo ? (
+          {project.demo && (
             <a href={project.demo} className="px-4 py-2 bg-primary text-black rounded hover:opacity-95 transition">Live Demo</a>
-          ) : (
-            <button disabled className="px-4 py-2 bg-gray-700 rounded text-gray-500">Live Demo</button>
           )}
         </div>
       </div>

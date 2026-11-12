@@ -2,14 +2,14 @@ export const projects = [
   {
     id: "01",
     number: "01",
-    title: "Concurso Simulador",
+    title: "Nota de Banca - Simulador",
     slug: "simulador-concursos",
     description:
-      "Plataforma web para criação e realização de simulados para concursos públicos. Projeto Full Stack com Next.js, TypeScript, Prisma e PostgreSQL (veja o repositório para instruções de deploy).",
+      "Plataforma para criar simulados de concursos, acompanhar resultados e estudar com regras de pontuação da banca.",
     technologies: ["Next.js", "React", "TypeScript", "Prisma", "PostgreSQL", "Tailwind CSS"],
     github: "https://github.com/Andre-gith/simulador-concursos",
-    demo: "",
-    image: "/projects/simulador-concursos/placeholder.png",
+    demo: "https://simulador-concursos.onrender.com/",
+    image: "/projects/simulador-concursos/nota-de-banca.png",
     featured: true,
   },
   {
@@ -36,6 +36,32 @@ export const projects = [
     demo: "",
     image: "/projects/api-gerenciamento-tarefas/placeholder.png",
     featured: false,
+  },
+  {
+    id: "04",
+    number: "04",
+    title: "Laço",
+    slug: "laco",
+    description:
+      "Galeria de fotos para casamentos e eventos. Os convidados podem enviar fotos pelo navegador, compartilhando a galeria por QR Code.",
+    technologies: ["Galeria de fotos", "QR Code", "Eventos"],
+    github: "",
+    demo: "https://wedding-photo-app-eta.vercel.app/",
+    image: "/projects/laco/laco.png",
+    featured: true,
+  },
+  {
+    id: "05",
+    number: "05",
+    title: "FreelaCalc",
+    slug: "freelacalc",
+    description:
+      "Calculadora de preços para freelancers que considera horas de trabalho, impostos e margem de lucro para sugerir o valor de um projeto.",
+    technologies: ["Precificação", "Freelancers", "Calculadora"],
+    github: "",
+    demo: "https://freelacalc.netlify.app/",
+    image: "/projects/freelacalc/freelacalc.png",
+    featured: true,
   },
 ];
 
