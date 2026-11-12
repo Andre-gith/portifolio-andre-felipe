@@ -388,6 +388,32 @@ nav .navlinks li a.active {
     line-height: 1.65;
 }
 
+.trajetoria-competencias {
+    display: grid;
+    gap: 0.55rem;
+    list-style: none;
+    margin-top: 0.85rem;
+}
+
+.trajetoria-competencias li {
+    position: relative;
+    padding-left: 1rem;
+    color: #999;
+    font-size: 0.84rem;
+    line-height: 1.5;
+}
+
+.trajetoria-competencias li::before {
+    position: absolute;
+    top: 0.55em;
+    left: 0;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #007ced;
+    content: "";
+}
+
 .cursos-heading {
     margin-top: 1.2rem;
 }
