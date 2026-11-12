@@ -8,11 +8,38 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 1.5rem;
 }
 
 body {
     overflow-x: hidden;
     background: #1a1a2e;
+}
+
+main {
+    display: block;
+}
+
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid #76bdff;
+    outline-offset: 4px;
+}
+
+.skip-link {
+    position: fixed;
+    top: 12px;
+    left: 12px;
+    z-index: 200;
+    transform: translateY(-160%);
+    background: #007ced;
+    color: #fff;
+    padding: 10px 16px;
+    border-radius: 8px;
+}
+
+.skip-link:focus {
+    transform: translateY(0);
 }
 
 /* ===== SHARED ===== */
@@ -130,6 +157,9 @@ nav .togglebtn {
     z-index: 5;
     cursor: pointer;
     display: none;
+    border: 0;
+    padding: 4px;
+    background: transparent;
 }
 
 nav .togglebtn span {
@@ -158,6 +188,10 @@ nav .navlinks li a {
 }
 
 nav .navlinks li a:hover {
+    color: #007ced;
+}
+
+nav .navlinks li a.active {
     color: #007ced;
 }
 
@@ -269,78 +303,120 @@ nav .navlinks li a:hover {
     padding: 6rem 0;
 }
 
-.sobre-grid {
-    display: grid;
-    grid-template-columns: 1fr 320px;
-    gap: 4rem;
-    align-items: start;
+.sobre-copy {
+    max-width: 900px;
+    margin: 0 auto;
 }
 
-.sobre-text p {
+.sobre-copy p {
     color: #aaa;
     line-height: 1.8;
     margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.trajetoria-section {
+    background: #1a1a2e;
+    padding: 6rem 0;
+}
+
+.trajetoria-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+}
+
+.trajetoria-card,
+.competencia-card {
+    background: #13131f;
+    border: 1px solid #2a2a4a;
+    border-radius: 14px;
+    padding: 1.6rem;
+}
+
+.trajetoria-card > h3,
+.competencias > h3 {
+    color: #e5e5e5;
+    font-size: 1.15rem;
+    margin-bottom: 1.2rem;
+}
+
+.trajetoria-card > h3 i {
+    color: #007ced;
+    margin-right: 0.45rem;
+}
+
+.trajetoria-item {
+    border-left: 2px solid #007ced55;
+    padding: 0 0 1.15rem 1rem;
+    margin-left: 0.2rem;
+}
+
+.trajetoria-item:last-of-type {
+    padding-bottom: 0;
+}
+
+.trajetoria-periodo {
+    color: #007ced;
+    font-size: 0.78rem;
+    font-weight: 600;
+}
+
+.trajetoria-item h4,
+.cursos-heading {
+    color: #d7d7e2;
     font-size: 0.95rem;
+    margin: 0.25rem 0;
 }
 
-.sobre-text strong {
-    color: #007ced;
-}
-
-.skills-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-top: 1.5rem;
-}
-
-.skill-tag {
-    background: #1e1e35;
-    color: #007ced;
-    border: 1px solid #007ced33;
-    padding: 5px 14px;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    font-weight: 500;
-    transition: 0.3s;
-}
-
-.skill-tag:hover {
-    background: #007ced;
-    color: #fff;
-}
-
-.sobre-stats {
-    display: flex;
-    flex-direction: column;
-    gap: 1.2rem;
-}
-
-.stat-card {
-    background: #1e1e35;
-    border: 1px solid #007ced22;
-    border-left: 3px solid #007ced;
-    border-radius: 10px;
-    padding: 1.2rem 1.5rem;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-}
-
-.stat-num {
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: #007ced;
-}
-
-.stat-label {
-    font-size: 0.82rem;
+.trajetoria-item p,
+.curso-item {
     color: #888;
+    font-size: 0.84rem;
+    line-height: 1.65;
+}
+
+.cursos-heading {
+    margin-top: 1.2rem;
+}
+
+.curso-item {
+    margin-top: 0.35rem;
+}
+
+.competencias {
+    margin-top: 2.5rem;
+}
+
+.competencias > h3 {
+    text-align: center;
+}
+
+.competencias-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.competencia-card {
+    padding: 1.2rem;
+}
+
+.competencia-card h4 {
+    color: #007ced;
+    font-size: 0.9rem;
+    margin-bottom: 0.55rem;
+}
+
+.competencia-card p {
+    color: #999;
+    font-size: 0.82rem;
+    line-height: 1.6;
 }
 
 /* ===== PROJETOS ===== */
 .projetos-section {
-    background: #1a1a2e;
+    background: #13131f;
     padding: 6rem 0;
 }
 
@@ -352,10 +428,11 @@ nav .navlinks li a:hover {
 }
 
 .projeto-card {
-    background: #13131f;
+    min-width: 0;
+    background: #1a1a2e;
     border: 1px solid #2a2a4a;
     border-radius: 14px;
-    padding: 1.8rem;
+    padding: 1rem;
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -370,37 +447,54 @@ nav .navlinks li a:hover {
 
 .projeto-card.destaque {
     border-color: #007ced44;
-    background: linear-gradient(135deg, #13131f, #1a1a35);
+    background: linear-gradient(135deg, #1a1a2e, #1a1a35);
 }
 
-.projeto-icon {
-    width: 50px;
-    height: 50px;
-    background: #007ced15;
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.projeto-icon i {
-    color: #007ced;
-    font-size: 1.4rem;
-}
-
-.projeto-imagem {
+.projeto-imagem,
+.projeto-capa {
     display: block;
     width: 100%;
-    height: 130px;
+    aspect-ratio: 16 / 9;
+    height: auto;
     object-fit: cover;
     object-position: top center;
     border: 1px solid #2a2a4a;
     border-radius: 9px;
 }
 
+.projeto-capa {
+    display: grid;
+    place-items: center;
+    background: linear-gradient(135deg, #142b48, #1e1e35 70%);
+}
+
+.projeto-capa i {
+    color: #4aa5ff;
+    font-size: 2.8rem;
+}
+
+.projeto-info {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.projeto-origem {
+    align-self: flex-start;
+    color: #8fc9ff;
+    background: #007ced15;
+    border: 1px solid #007ced33;
+    border-radius: 20px;
+    padding: 4px 10px;
+    margin-bottom: 0.55rem;
+    font-size: 0.7rem;
+    line-height: 1.4;
+}
+
 .projeto-info h3 {
     color: #e5e5e5;
-    font-size: 1rem;
+    font-size: 1.05rem;
     font-weight: 600;
     margin-bottom: 0.5rem;
 }
@@ -437,8 +531,10 @@ nav .navlinks li a:hover {
 }
 
 .projeto-links {
-    margin-top: 0.8rem;
+    margin-top: auto;
+    padding-top: 1rem;
     display: flex;
+    flex-wrap: wrap;
     gap: 10px;
 }
 
@@ -466,14 +562,9 @@ nav .navlinks li a:hover {
 }
 
 .contato-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 1.2rem;
-}
-
-.contato-card {
-    width: 200px;
 }
 
 .contato-card {
@@ -532,31 +623,40 @@ footer i {
 /* ===== RESPONSIVE NAV ===== */
 @media(max-width: 930px) {
     nav .togglebtn {
-        display: initial;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 
-    .click span {
+    nav .togglebtn.click {
+        z-index: 101;
+    }
+
+    .togglebtn.click span {
         position: absolute;
         margin-top: 12px;
     }
 
-    .click span:first-child { transform: rotate(-45deg); }
-    .click span:nth-child(2) { opacity: 0; margin: 0; }
-    .click span:last-child { transform: rotate(45deg); top: 0; }
+    .togglebtn.click span:first-child { transform: rotate(-45deg); }
+    .togglebtn.click span:nth-child(2) { opacity: 0; margin: 0; }
+    .togglebtn.click span:last-child { transform: rotate(45deg); top: 0; }
 
     nav .navlinks {
         position: fixed;
         top: 0;
         right: -100%;
-        width: 65%;
+        width: min(85%, 340px);
         height: 100vh;
+        height: 100dvh;
         background-color: #13131f;
         z-index: 100;
         box-shadow: -5px 0 30px rgba(0, 0, 0, 0.4);
-        transition: 0.4s;
+        transition: right 0.35s ease, visibility 0s linear 0.35s;
         padding: 80px 25px 25px;
         display: flex;
         flex-direction: column;
+        overflow-y: auto;
+        visibility: hidden;
     }
 
     nav .navlinks li { display: block; }
@@ -568,24 +668,21 @@ footer i {
         margin-right: 0;
     }
 
-    nav .navlinks.open { right: 0; }
-
-    .sobre-grid {
-        grid-template-columns: 1fr;
-        gap: 2rem;
+    nav .navlinks.open {
+        right: 0;
+        visibility: visible;
+        transition: right 0.35s ease, visibility 0s;
     }
 
-    .sobre-stats {
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-
-    .stat-card {
-        flex: 1;
-        min-width: 140px;
+    .competencias-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
     .projetos-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .contato-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
@@ -616,17 +713,75 @@ footer i {
         grid-template-columns: 1fr;
     }
 
-    .contato-grid {
-        grid-template-columns: 1fr 1fr;
+    .trajetoria-grid {
+        grid-template-columns: 1fr;
     }
 }
 
 @media(max-width: 480px) {
+    .wrapper {
+        max-width: 100%;
+        padding: 0 18px;
+    }
+
+    header {
+        padding-top: 26px;
+    }
+
+    .logo .logo-text {
+        font-size: 1.15rem;
+    }
+
+    .hero-text h1 {
+        font-size: 2.15rem;
+    }
+
+    .hero-text h5 {
+        font-size: 0.8rem;
+    }
+
+    .hero-text h5 span {
+        font-size: 0.85rem;
+    }
+
+    .sobre-section,
+    .trajetoria-section,
+    .projetos-section,
+    .contato-section {
+        padding: 4rem 0;
+    }
+
+    .trajetoria-card {
+        padding: 1.2rem;
+    }
+
+    .competencias-grid {
+        grid-template-columns: 1fr;
+    }
+
     .contato-grid {
         grid-template-columns: 1fr;
     }
 
     .section-header h2 {
         font-size: 1.8rem;
+    }
+
+    .projeto-card {
+        padding: 0.85rem;
+    }
+}
+
+@media(prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
     }
 }

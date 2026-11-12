@@ -1,50 +1,55 @@
-// ===== MOBILE NAVBAR =====
-var togglebtn = document.querySelector(".togglebtn");
-var nav = document.querySelector(".navlinks");
+const toggleButton = document.querySelector(".togglebtn");
+const navLinks = document.querySelector(".navlinks");
+const navItems = document.querySelectorAll(".navlinks a");
 
-togglebtn.addEventListener("click", function () {
-    this.classList.toggle("click");
-    nav.classList.toggle("open");
-});
+function closeMenu() {
+    if (!toggleButton || !navLinks) return;
 
-// Fechar navbar ao clicar em um link
-document.querySelectorAll(".navlinks li a").forEach(function (link) {
-    link.addEventListener("click", function () {
-        togglebtn.classList.remove("click");
-        nav.classList.remove("open");
+    toggleButton.classList.remove("click");
+    toggleButton.setAttribute("aria-expanded", "false");
+    toggleButton.setAttribute("aria-label", "Abrir menu");
+    navLinks.classList.remove("open");
+}
+
+if (toggleButton && navLinks) {
+    toggleButton.addEventListener("click", function () {
+        const isOpen = this.getAttribute("aria-expanded") === "true";
+        this.classList.toggle("click", !isOpen);
+        this.setAttribute("aria-expanded", String(!isOpen));
+        this.setAttribute("aria-label", isOpen ? "Abrir menu" : "Fechar menu");
+        navLinks.classList.toggle("open", !isOpen);
     });
-});
 
-// ===== TYPED.JS =====
-/* global Typed */
-new Typed(".input", {
-    strings: [
-        "Desenvolvedor Full Stack",
-    ],
-    typeSpeed: 70,
-    backSpeed: 95,
-    backDelay: 1800,
-    loop: true
-});
+    navItems.forEach(function (link) {
+        link.addEventListener("click", closeMenu);
+    });
 
-// ===== ACTIVE NAV ON SCROLL =====
-window.addEventListener("scroll", function () {
-    var sections = document.querySelectorAll("section, .hero-header");
-    var navLinks = document.querySelectorAll(".navlinks li a");
+    document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape") closeMenu();
+    });
+}
+
+const sections = document.querySelectorAll(".hero-header[id], main section[id], main article[id]");
+
+function updateActiveNavigation() {
+    const scrollPosition = window.scrollY + 120;
+    let activeSection = sections[0];
 
     sections.forEach(function (section) {
-        var top = window.scrollY;
-        var offset = section.offsetTop - 100;
-        var height = section.offsetHeight;
-        var id = section.getAttribute("id");
+        if (section.offsetTop <= scrollPosition) activeSection = section;
+    });
 
-        if (top >= offset && top < offset + height) {
-            navLinks.forEach(function (link) {
-                link.style.color = "#aaa";
-                if (link.getAttribute("href") === "#" + id) {
-                    link.style.color = "#007ced";
-                }
-            });
+    navItems.forEach(function (link) {
+        const isActive = activeSection && link.getAttribute("href") === "#" + activeSection.id;
+        link.classList.toggle("active", Boolean(isActive));
+
+        if (isActive) {
+            link.setAttribute("aria-current", "location");
+        } else {
+            link.removeAttribute("aria-current");
         }
     });
-});
+}
+
+window.addEventListener("scroll", updateActiveNavigation, { passive: true });
+window.addEventListener("load", updateActiveNavigation);

@@ -4,12 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfólio de André Felipe, Desenvolvedor Full Stack Júnior com ênfase em Backend. Projetos, trajetória e contato.">
+    <meta name="theme-color" content="#1a1a2e">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <link rel="stylesheet" href="/style.css">
     <title>Portfólio — André Felipe</title>
 </head>
 
 <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
     <!-- ===== HERO ===== -->
     <div class="hero-header" id="inicio">
@@ -19,16 +25,18 @@
                     <i class="fa-solid fa-a"></i>
                     <div class="logo-text">André Felipe</div>
                 </div>
-                <nav>
-                    <div class="togglebtn">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                    <ul class="navlinks">
+                <nav aria-label="Navegação principal">
+                    <button class="togglebtn" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="navlinks">
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                    </button>
+                    <ul class="navlinks" id="navlinks">
                         <li><a href="#inicio">Início</a></li>
                         <li><a href="#sobre">Sobre</a></li>
-                        <li><a href="#projetos">Portfólio</a></li>
+                        <li><a href="#trajetoria">Trajetória</a></li>
+                        <li><a href="#formacao">Formação</a></li>
+                        <li><a href="#projetos">Projetos</a></li>
                         <li><a href="#contato">Contato</a></li>
                     </ul>
                 </nav>
@@ -40,243 +48,268 @@
                 </div>
 
                 <div class="hero-text">
-                    <h5>Olá, eu sou <span class="input">Desenvolvedor Full Stack</span></h5>
+                    <h5>Desenvolvedor Full Stack Júnior <span>| Ênfase em Backend</span></h5>
                     <h1>André Felipe</h1>
-                    <p>Desenvolvedor em transição de carreira com foco em construir produtos digitais reais — do backend ao frontend. Pós-graduando em Full Stack pela FIAP, com experiência prática em Node.js, React, Next.js e PostgreSQL.</p>
+                    <p>Desenvolvedor Full Stack Júnior com ênfase em Backend. Trago experiência como freelancer e em projetos acadêmicos, unindo minha trajetória técnica na indústria ao desenvolvimento de APIs e aplicações web. Busco minha primeira oportunidade formal em tecnologia.</p>
                     <div class="btn-group">
                         <a href="/assets/Curriculo_Andre_Felipe_2025.pdf" target="_blank" rel="noreferrer" class="btn active">
                             <i class="fa-solid fa-download"></i> Download CV
                         </a>
-                        <a href="https://wa.me/5541999028078?text=Olá+André,+vi+seu+portfólio+e+gostaria+de+conversar!" target="_blank" class="btn cont">
+                        <a href="https://wa.me/5541999028078?text=Ol%C3%A1%20Andr%C3%A9%2C%20vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar!" target="_blank" rel="noreferrer" class="btn cont">
                             <i class="fa-brands fa-whatsapp"></i> WhatsApp
                         </a>
                     </div>
                     <div class="social">
-                        <a href="https://www.linkedin.com/in/andrefeliperosa" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-                        <a href="https://www.instagram.com/andrefoficial/" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="https://github.com/Andre-gith" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/andrefeliperosa" target="_blank" rel="noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin" aria-hidden="true"></i></a>
+                        <a href="https://www.instagram.com/andrefoficial/" target="_blank" rel="noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+                        <a href="https://github.com/Andre-gith" target="_blank" rel="noreferrer" aria-label="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- ===== SOBRE ===== -->
-    <section class="sobre-section" id="sobre">
-        <div class="wrapper">
-            <div class="section-header">
-                <h2>Sobre <span>Mim</span></h2>
-                <p class="section-sub">Quem está por trás do código</p>
-            </div>
-            <div class="sobre-grid">
-                <div class="sobre-text">
-                    <p>Venho de uma carreira técnica sólida na área industrial, onde desenvolvi disciplina, leitura de documentação técnica e resolução de problemas complexos. Em 2023 mergulhei de vez em tecnologia.</p>
-                    <p>Hoje sou pós-graduando em Full Stack pela <strong>FIAP</strong> e atuo como desenvolvedor freelance, entregando landing pages e sistemas para clientes reais. Meu stack principal envolve <strong>Node.js, Express, PostgreSQL, Prisma, React e Next.js</strong>.</p>
-                    <div class="skills-grid">
-                        <span class="skill-tag">HTML5 / CSS3</span>
-                        <span class="skill-tag">JavaScript</span>
-                        <span class="skill-tag">React</span>
-                        <span class="skill-tag">Next.js</span>
-                        <span class="skill-tag">Node.js</span>
-                        <span class="skill-tag">Express</span>
-                        <span class="skill-tag">PostgreSQL</span>
-                        <span class="skill-tag">Prisma ORM</span>
-                        <span class="skill-tag">Docker</span>
-                        <span class="skill-tag">Git / GitHub</span>
-                        <span class="skill-tag">JWT / Auth</span>
-                        <span class="skill-tag">REST APIs</span>
-                    </div>
+    <main id="conteudo" tabindex="-1">
+        <!-- ===== SOBRE ===== -->
+        <section class="sobre-section" id="sobre">
+            <div class="wrapper">
+                <div class="section-header">
+                    <h2>Sobre <span>Mim</span></h2>
+                    <p class="section-sub">Uma trajetória técnica que agora se conecta à tecnologia</p>
                 </div>
-                <div class="sobre-stats">
-                    <div class="stat-card">
-                        <span class="stat-num">21+</span>
-                        <span class="stat-label">Repositórios no GitHub</span>
-                    </div>
-                    <div class="stat-card">
-                        <span class="stat-num">2</span>
-                        <span class="stat-label">Anos estudando tech</span>
-                    </div>
-                    <div class="stat-card">
-                        <span class="stat-num">Full Stack</span>
-                        <span class="stat-label">Pós-graduação FIAP</span>
-                    </div>
+                <div class="sobre-copy">
+                    <p>Sou desenvolvedor Full Stack Júnior com ênfase em Backend. Minha experiência anterior na área industrial fortaleceu minha capacidade de analisar problemas, seguir processos e trabalhar com atenção a detalhes — competências que hoje levo para o desenvolvimento de software.</p>
+                    <p>Desde 2024, também desenvolvo sites como freelancer e participo de projetos acadêmicos em equipe. Estou buscando minha primeira oportunidade formal em tecnologia para continuar aprendendo e contribuir com soluções bem construídas.</p>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- ===== PROJETOS ===== -->
-    <section class="projetos-section" id="projetos">
-        <div class="wrapper">
-            <div class="section-header">
-                <h2>Meus <span>Projetos</span></h2>
-                <p class="section-sub">O que estou construindo</p>
+        <!-- ===== TRAJETÓRIA ===== -->
+        <section class="trajetoria-section" id="trajetoria">
+            <div class="wrapper">
+                <div class="section-header">
+                    <h2>Minha <span>Trajetória</span></h2>
+                    <p class="section-sub">Experiências que construíram meu caminho até o desenvolvimento</p>
+                </div>
+                <div class="trajetoria-grid">
+                    <article class="trajetoria-card">
+                        <h3><i class="fa-solid fa-briefcase" aria-hidden="true"></i> Experiência</h3>
+                        <div class="trajetoria-item">
+                            <span class="trajetoria-periodo">Abr/2024 – atual</span>
+                            <h4>Desenvolvedor Front-end Freelancer</h4>
+                            <p>Desenvolvimento de landing pages e sites com HTML, CSS e JavaScript. Atuação independente do levantamento de requisitos à entrega, com atenção à responsividade e aos objetivos de cada cliente.</p>
+                        </div>
+                        <div class="trajetoria-item">
+                            <span class="trajetoria-periodo">2025</span>
+                            <h4>Projeto acadêmico em equipe · FIAP</h4>
+                            <p>Participação no desenvolvimento full stack do Khora, com trabalho colaborativo e contribuição nas APIs de gerenciamento de turmas e avaliações.</p>
+                        </div>
+                        <div class="trajetoria-item">
+                            <h4>Experiência anterior na indústria</h4>
+                            <p>Minha formação técnica em mecânica industrial contribuiu para desenvolver disciplina, raciocínio analítico e prática de diagnóstico de problemas.</p>
+                        </div>
+                    </article>
+                    <article class="trajetoria-card" id="formacao">
+                        <h3><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i> Formação</h3>
+                        <div class="trajetoria-item">
+                            <span class="trajetoria-periodo">2025 – 2026 · concluída</span>
+                            <h4>Pós-graduação em Full Stack Development</h4>
+                            <p>FIAP</p>
+                        </div>
+                        <div class="trajetoria-item">
+                            <span class="trajetoria-periodo">2022 – 2025</span>
+                            <h4>Tecnólogo em Análise e Desenvolvimento de Sistemas</h4>
+                            <p>Estácio de Sá</p>
+                        </div>
+                        <h4 class="cursos-heading">Cursos complementares</h4>
+                        <p class="curso-item">Desenvolvedor Front-end · Danki Code (170h)</p>
+                        <p class="curso-item">Ciência de Dados com Python · Bootcamp Santander (89h)</p>
+                    </article>
+                </div>
+
+                <div class="competencias">
+                    <h3>Tecnologias e ferramentas</h3>
+                    <div class="competencias-grid">
+                        <div class="competencia-card">
+                            <h4>Backend</h4>
+                            <p>Node.js · Express · NestJS · APIs REST · Prisma · TypeORM</p>
+                        </div>
+                        <div class="competencia-card">
+                            <h4>Frontend</h4>
+                            <p>JavaScript · TypeScript · React · Next.js · HTML · CSS</p>
+                        </div>
+                        <div class="competencia-card">
+                            <h4>Dados e qualidade</h4>
+                            <p>PostgreSQL · Vitest · Jest · Swagger / OpenAPI</p>
+                        </div>
+                        <div class="competencia-card">
+                            <h4>Ferramentas</h4>
+                            <p>Git · GitHub · Docker · Docker Compose</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="projetos-grid">
+        </section>
 
-                <div class="projeto-card destaque">
-                    <div class="projeto-icon"><i class="fa-solid fa-graduation-cap"></i></div>
-                    <div class="projeto-info">
-                        <h3>Khora, Plataforma Educacional</h3>
-                        <div class="projeto-descricao">
-                            <p><strong>Hackathon FIAP, projeto final de avaliação</strong> · desenvolvido em equipe.</p>
-                            <p>Plataforma que conecta professores e alunos, centralizando a gestão de turmas e avaliações e o acompanhamento do desempenho dos estudantes.</p>
-                            <p><strong>Minha parte:</strong> backend das APIs de <strong>Turma</strong> e <strong>Avaliação</strong>: gestão de turmas, submissão de avaliações, armazenamento de respostas e correção automática de questões objetivas.</p>
-                            <p><strong>Stack da minha parte:</strong> Node.js · Express · Prisma · PostgreSQL.</p>
+        <!-- ===== PROJETOS ===== -->
+        <section class="projetos-section" id="projetos">
+            <div class="wrapper">
+                <div class="section-header">
+                    <h2>Meus <span>Projetos</span></h2>
+                    <p class="section-sub">Projetos pessoais, acadêmicos e de estudo</p>
+                </div>
+                <div class="projetos-grid">
+                    <article class="projeto-card destaque">
+                        <img class="projeto-imagem" src="/projects/simulador-concursos/nota-de-banca.png" alt="Tela da plataforma Nota de Banca com simulados para concursos" loading="lazy" decoding="async">
+                        <div class="projeto-info">
+                            <span class="projeto-origem">Projeto pessoal · individual</span>
+                            <h3>Nota de Banca</h3>
+                            <div class="projeto-descricao">
+                                <p>Plataforma de simulados que calcula a pontuação conforme as regras das bancas, considerando pesos, penalidades por erro e questões em branco, além do desempenho por matéria e bloco.</p>
+                                <p><strong>Motivação:</strong> criar uma ferramenta para praticar concursos com pontuação próxima à prova real.</p>
+                                <p><strong>Destaques:</strong> regras de Cebraspe, Cesgranrio e FGV; questões de PDFs oficiais com importação assistida por IA e revisão humana; autenticação, histórico de tentativas, testes e deploy com Docker e PostgreSQL no Neon.</p>
+                            </div>
+                            <div class="projeto-tags">
+                                <span>Next.js 15</span><span>React 19</span><span>TypeScript</span><span>Prisma 6</span><span>PostgreSQL</span><span>Auth.js</span><span>Tailwind</span><span>Vitest</span>
+                            </div>
+                            <div class="projeto-links">
+                                <a href="https://github.com/Andre-gith/simulador-concursos" target="_blank" rel="noreferrer"><i class="fa-brands fa-github" aria-hidden="true"></i> Código</a>
+                                <a href="https://simulador-concursos.onrender.com/" target="_blank" rel="noreferrer"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Demo</a>
+                            </div>
                         </div>
-                        <div class="projeto-tags">
-                            <span>Node.js</span><span>Express</span><span>Prisma</span><span>PostgreSQL</span>
+                    </article>
+
+                    <article class="projeto-card destaque">
+                        <div class="projeto-capa" aria-hidden="true"><i class="fa-solid fa-school"></i></div>
+                        <div class="projeto-info">
+                            <span class="projeto-origem">Acadêmico · Hackathon FIAP · em equipe</span>
+                            <h3>Khora · Plataforma Educacional</h3>
+                            <div class="projeto-descricao">
+                                <p>Plataforma educacional para conectar professores e alunos e apoiar a gestão de turmas, avaliações e acompanhamento do desempenho.</p>
+                                <p><strong>Minha contribuição:</strong> backend das APIs de Turma e Avaliação, incluindo gerenciamento de turmas e participantes, avaliações, questões, respostas e correção automática de questões objetivas.</p>
+                                <p><strong>Tecnologias por API:</strong> Turma — NestJS, TypeScript e TypeORM; Avaliação — Node.js, Express e Prisma. Ambas usam PostgreSQL.</p>
+                            </div>
+                            <div class="projeto-tags">
+                                <span>NestJS</span><span>Express</span><span>TypeScript</span><span>Prisma</span><span>TypeORM</span><span>PostgreSQL</span><span>Swagger</span>
+                            </div>
+                            <div class="projeto-links">
+                                <a href="https://github.com/fivamkhora/api-turma" target="_blank" rel="noreferrer"><i class="fa-brands fa-github" aria-hidden="true"></i> API Turma</a>
+                                <a href="https://github.com/fivamkhora/api-avaliacao" target="_blank" rel="noreferrer"><i class="fa-brands fa-github" aria-hidden="true"></i> API Avaliação</a>
+                            </div>
                         </div>
-                        <div class="projeto-links">
-                            <a href="https://github.com/fivamkhora/api-turma" target="_blank" rel="noreferrer">
-                                <i class="fa-brands fa-github"></i> API Turma
-                            </a>
-                            <a href="https://github.com/fivamkhora/api-avaliacao" target="_blank" rel="noreferrer">
-                                <i class="fa-brands fa-github"></i> API Avaliação
-                            </a>
+                    </article>
+
+                    <article class="projeto-card">
+                        <div class="projeto-capa" aria-hidden="true"><i class="fa-solid fa-list-check"></i></div>
+                        <div class="projeto-info">
+                            <span class="projeto-origem">Projeto pessoal</span>
+                            <h3>API de Gerenciamento de Tarefas</h3>
+                            <div class="projeto-descricao">
+                                <p>API REST para criar, listar, atualizar e remover tarefas, com código organizado em rotas, controllers e services.</p>
+                            </div>
+                            <div class="projeto-tags">
+                                <span>Node.js</span><span>Express</span><span>JavaScript</span><span>REST</span>
+                            </div>
+                            <div class="projeto-links">
+                                <a href="https://github.com/Andre-gith/api-gerenciamento-tarefas" target="_blank" rel="noreferrer"><i class="fa-brands fa-github" aria-hidden="true"></i> Código</a>
+                            </div>
                         </div>
-                    </div>
+                    </article>
+
+                    <article class="projeto-card">
+                        <div class="projeto-capa" aria-hidden="true"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                        <div class="projeto-info">
+                            <span class="projeto-origem">Projeto pessoal</span>
+                            <h3>Construtor de Presell</h3>
+                            <div class="projeto-descricao">
+                                <p>Aplicação full stack para criar e editar páginas de pré-venda, com cadastro, login e painel privado para gerenciar as páginas.</p>
+                            </div>
+                            <div class="projeto-tags">
+                                <span>React</span><span>Vite</span><span>Node.js</span><span>Express</span><span>Prisma</span><span>JWT</span>
+                            </div>
+                            <div class="projeto-links">
+                                <a href="https://github.com/Andre-gith/Construtor-de-Presell" target="_blank" rel="noreferrer"><i class="fa-brands fa-github" aria-hidden="true"></i> Código</a>
+                                <a href="https://construtor-de-presell.vercel.app" target="_blank" rel="noreferrer"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Demo</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="projeto-card">
+                        <img class="projeto-imagem" src="/projects/laco/laco.png" alt="Tela do Laço, galeria de fotos para eventos com acesso por QR Code" loading="lazy" decoding="async">
+                        <div class="projeto-info">
+                            <span class="projeto-origem">Projeto pessoal</span>
+                            <h3>Laço · Wedding Photo App</h3>
+                            <div class="projeto-descricao">
+                                <p>Galeria para eventos em que convidados enviam fotos pelo navegador usando um QR Code. Inclui compressão de imagens e armazenamento compatível com S3.</p>
+                            </div>
+                            <div class="projeto-tags">
+                                <span>Next.js</span><span>TypeScript</span><span>Prisma</span><span>PostgreSQL</span><span>S3</span>
+                            </div>
+                            <div class="projeto-links">
+                                <a href="https://github.com/Andre-gith/wedding-photo-app" target="_blank" rel="noreferrer"><i class="fa-brands fa-github" aria-hidden="true"></i> Código</a>
+                                <a href="https://wedding-photo-app-eta.vercel.app/" target="_blank" rel="noreferrer"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Demo</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="projeto-card">
+                        <img class="projeto-imagem" src="/projects/amazon-prime-video/prime-video.png" alt="Tela do projeto de estudo inspirado em uma plataforma de streaming" loading="lazy" decoding="async">
+                        <div class="projeto-info">
+                            <span class="projeto-origem">Projeto de estudo</span>
+                            <h3>Amazon Prime Video · Clone de interface</h3>
+                            <div class="projeto-descricao">
+                                <p>Projeto de estudo inspirado em uma plataforma de streaming, com catálogo de filmes e séries carregado a partir da API do TMDB.</p>
+                            </div>
+                            <div class="projeto-tags">
+                                <span>HTML</span><span>CSS</span><span>JavaScript</span><span>API TMDB</span>
+                            </div>
+                            <div class="projeto-links">
+                                <a href="https://github.com/Andre-gith/projeto-amz-clone" target="_blank" rel="noreferrer"><i class="fa-brands fa-github" aria-hidden="true"></i> Código</a>
+                            </div>
+                        </div>
+                    </article>
                 </div>
 
-                <div class="projeto-card">
-                    <img class="projeto-imagem" src="/projects/simulador-concursos/nota-de-banca.png" alt="Captura de tela do Nota de Banca">
-                    <div class="projeto-icon"><i class="fa-solid fa-graduation-cap"></i></div>
-                    <div class="projeto-info">
-                        <h3>Nota de Banca</h3>
-                        <div class="projeto-descricao">
-                            <p><strong>Projeto pessoal</strong> · desenvolvido sozinho, do banco ao deploy.</p>
-                            <p>Plataforma de simulados que reúne vários concursos públicos em um só lugar e calcula a nota pelas regras reais de cada banca: pesos, penalidade por erro, questões em branco, desempenho por matéria e bloco. A ideia é estudar como se estivesse na prova de verdade.</p>
-                            <p><strong>Por que criei:</strong> não existia conteúdo nem ferramenta que simulasse a pontuação real dos concursos, então construí.</p>
-                            <p><strong>Destaques:</strong> motor de pontuação por banca (Cebraspe, Cesgranrio e FGV); questões de PDFs oficiais com importação assistida por IA e revisão humana obrigatória; autenticação, histórico de tentativas, testes com Vitest e deploy com Docker e PostgreSQL no Neon.</p>
-                            <p><strong>Stack:</strong> Next.js 15 · React 19 · TypeScript · Prisma 6 · PostgreSQL · Auth.js · Tailwind.</p>
-                        </div>
-                        <div class="projeto-tags">
-                            <span>Next.js 15</span><span>React 19</span><span>TypeScript</span><span>Prisma 6</span><span>PostgreSQL</span><span>Auth.js</span><span>Tailwind</span>
-                        </div>
-                        <div class="projeto-links">
-                            <a href="https://github.com/Andre-gith/simulador-concursos" target="_blank" rel="noreferrer">
-                                <i class="fa-brands fa-github"></i> Código
-                            </a>
-                            <a href="https://simulador-concursos.onrender.com/" target="_blank" rel="noreferrer">
-                                <i class="fa-solid fa-arrow-up-right-from-square"></i> Demo
-                            </a>
-                        </div>
-                    </div>
+                <div class="projetos-cta">
+                    <a href="https://github.com/Andre-gith" target="_blank" rel="noreferrer" class="btn active">
+                        <i class="fa-brands fa-github" aria-hidden="true"></i> Ver todos no GitHub
+                    </a>
                 </div>
-
-                <div class="projeto-card">
-                    <img class="projeto-imagem" src="/projects/laco/laco.png" alt="Captura de tela do Wedding Photo App">
-                    <div class="projeto-icon"><i class="fa-solid fa-camera"></i></div>
-                    <div class="projeto-info">
-                        <h3>Laço — Wedding Photo App</h3>
-                        <p>Galeria de fotos para casamentos. Os convidados compartilham imagens do evento pelo navegador, usando um QR Code.</p>
-                        <div class="projeto-tags">
-                            <span>TypeScript</span><span>Galeria</span><span>QR Code</span>
-                        </div>
-                        <div class="projeto-links">
-                            <a href="https://github.com/Andre-gith/wedding-photo-app" target="_blank" rel="noreferrer">
-                                <i class="fa-brands fa-github"></i> Código
-                            </a>
-                            <a href="https://wedding-photo-app-eta.vercel.app/" target="_blank" rel="noreferrer">
-                                <i class="fa-solid fa-arrow-up-right-from-square"></i> Demo
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="projeto-card">
-                    <img class="projeto-imagem" src="/projects/amazon-prime-video/prime-video.png" alt="Captura de tela do clone do Amazon Prime Video">
-                    <div class="projeto-icon"><i class="fa-brands fa-amazon"></i></div>
-                    <div class="projeto-info">
-                        <h3>Amazon Prime Video Clone</h3>
-                        <p>Clone fiel da interface do Amazon Prime Video com HTML, CSS e JavaScript puro. Layout responsivo com carrossel de conteúdo e navegação funcional.</p>
-                        <div class="projeto-tags">
-                            <span>HTML</span><span>CSS</span><span>JavaScript</span>
-                        </div>
-                        <div class="projeto-links">
-                            <a href="https://github.com/Andre-gith/projeto-amz-clone" target="_blank">
-                                <i class="fa-brands fa-github"></i> Código
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="projeto-card">
-                    <div class="projeto-icon"><i class="fa-solid fa-list-check"></i></div>
-                    <div class="projeto-info">
-                        <h3>API de Gerenciamento de Tarefas</h3>
-                        <p>API REST completa em Node.js com arquitetura MVC — endpoints para criar, listar, atualizar e remover tarefas. Organização de código com separação de rotas, controllers e services.</p>
-                        <div class="projeto-tags">
-                            <span>Node.js</span><span>Express</span><span>JavaScript</span><span>REST API</span><span>MVC</span>
-                        </div>
-                        <div class="projeto-links">
-                            <a href="https://github.com/Andre-gith/api-gerenciamento-tarefas" target="_blank">
-                                <i class="fa-brands fa-github"></i> Código
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="projeto-card">
-                    <div class="projeto-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
-                    <div class="projeto-info">
-                        <h3>Construtor de Presell</h3>
-                        <p>Aplicação fullstack para criação de páginas de pré-venda (advertoriais) com editor visual. Backend em Node.js e frontend deployado na Vercel.</p>
-                        <div class="projeto-tags">
-                            <span>Node.js</span><span>JavaScript</span><span>CSS</span><span>HTML</span><span>Vercel</span>
-                        </div>
-                        <div class="projeto-links">
-                            <a href="https://github.com/Andre-gith/Construtor-de-Presell" target="_blank">
-                                <i class="fa-brands fa-github"></i> Código
-                            </a>
-                            <a href="https://construtor-de-presell.vercel.app" target="_blank">
-                                <i class="fa-solid fa-arrow-up-right-from-square"></i> Demo
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
             </div>
+        </section>
 
-            <div class="projetos-cta">
-                <a href="https://github.com/Andre-gith" target="_blank" class="btn active">
-                    <i class="fa-brands fa-github"></i> Ver todos no GitHub
-                </a>
+        <!-- ===== CONTATO ===== -->
+        <section class="contato-section" id="contato">
+            <div class="wrapper">
+                <div class="section-header">
+                    <h2>Entre em <span>Contato</span></h2>
+                    <p class="section-sub">Estou buscando minha primeira oportunidade formal como desenvolvedor Full Stack Júnior, com ênfase em Backend.</p>
+                </div>
+                <div class="contato-grid">
+                    <a href="https://wa.me/5541999028078?text=Ol%C3%A1%20Andr%C3%A9%2C%20vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar!" target="_blank" rel="noreferrer" class="contato-card">
+                        <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+                        <span>WhatsApp</span>
+                        <small>(41) 99902-8078</small>
+                    </a>
+                    <a href="mailto:andre.felipe.rosa@hotmail.com" class="contato-card">
+                        <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                        <span>E-mail</span>
+                        <small>andre.felipe.rosa@hotmail.com</small>
+                    </a>
+                    <a href="https://www.linkedin.com/in/andrefeliperosa" target="_blank" rel="noreferrer" class="contato-card">
+                        <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+                        <span>LinkedIn</span>
+                        <small>in/andrefeliperosa</small>
+                    </a>
+                    <a href="https://github.com/Andre-gith" target="_blank" rel="noreferrer" class="contato-card">
+                        <i class="fa-brands fa-github" aria-hidden="true"></i>
+                        <span>GitHub</span>
+                        <small>Andre-gith</small>
+                    </a>
+                </div>
             </div>
-        </div>
-    </section>
-
-    <!-- ===== CONTATO ===== -->
-    <section class="contato-section" id="contato">
-        <div class="wrapper">
-            <div class="section-header">
-                <h2>Entre em <span>Contato</span></h2>
-                <p class="section-sub">Vamos trabalhar juntos?</p>
-            </div>
-            <div class="contato-grid">
-                <a href="https://wa.me/5541999028078?text=Olá+André,+vi+seu+portfólio+e+gostaria+de+conversar!" target="_blank" class="contato-card">
-                    <i class="fa-brands fa-whatsapp"></i>
-                    <span>WhatsApp</span>
-                    <small>(41) 99902-8078</small>
-                </a>
-                <a href="mailto:andre.felipe.rosa@hotmail.com" class="contato-card">
-                    <i class="fa-solid fa-envelope"></i>
-                    <span>E-mail</span>
-                    <small>andre.felipe.rosa@hotmail.com</small>
-                </a>
-                <a href="https://www.linkedin.com/in/andrefeliperosa" target="_blank" class="contato-card">
-                    <i class="fa-brands fa-linkedin"></i>
-                    <span>LinkedIn</span>
-                    <small>in/andrefeliperosa</small>
-                </a>
-                <a href="https://github.com/Andre-gith" target="_blank" class="contato-card">
-                    <i class="fa-brands fa-github"></i>
-                    <span>GitHub</span>
-                    <small>Andre-gith</small>
-                </a>
-            </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <!-- ===== FOOTER ===== -->
     <footer>
@@ -285,7 +318,6 @@
         </div>
     </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
     <script src="/script.js"></script>
 </body>
 </html>
